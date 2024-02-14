@@ -9,7 +9,7 @@ export class StartCommand extends Command {
     }
     handle(): void {
         this.bot.start((ctx) => {
-            console.log("Start command", ctx.session);
+            console.log("Bot starts: ", ctx.session);
             ctx.reply("Do you like the course?", Markup.inlineKeyboard([
                 Markup.button.callback("Like", "course_like"),
                 Markup.button.callback("Dislike", "course_dislike")
